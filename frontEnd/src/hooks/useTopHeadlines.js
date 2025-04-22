@@ -7,7 +7,7 @@ function useTopHeadline() {
     const [apiData, setApiData] = useState([])
     const dispatch = useDispatch()
     const cache = useSelector((store) => store.cache.cache)
-    const baseUrl = 'https://5000-idx-swen-1745306017722.cluster-73qgvk7hjjadkrjeyexca5ivva.cloudworkstations.dev/headlines'||'http://localhost:5000/headlines'
+    const baseUrl = 'https://swen.onrender.com'
 
     useEffect(() => {
 
@@ -20,7 +20,7 @@ function useTopHeadline() {
     }, [API_KEY])
 
     async function fetchData() {
-        const data = await fetch('https://5000-idx-swen-1745306017722.cluster-73qgvk7hjjadkrjeyexca5ivva.cloudworkstations.dev/headlines', {
+        const data = await fetch(`${baseUrl}/headlines`, {
             credentials: 'include'
           });
         const json = await data.json()

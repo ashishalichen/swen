@@ -3,7 +3,7 @@ import { SUGGESTION_API } from "../utils/constants"
 
 function useSearchSuggestion(keyword) {
     const [suggestions, setSuggetions] = useState('')
-    const baseUrl = 'https://5000-idx-swen-1745306017722.cluster-73qgvk7hjjadkrjeyexca5ivva.cloudworkstations.dev/search' || 'http://localhost:5000/search'
+    const baseUrl = 'https://swen.onrender.com/search'
 
     useEffect(() => {
         const timer = setTimeout(() => {

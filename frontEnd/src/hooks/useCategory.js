@@ -8,7 +8,7 @@ function useCategory(category) {
     const [apiData, setApiData] = useState([])
     const dispatch = useDispatch()
     const cache = useSelector((store) => store.cache.cache)
-    const baseUrl = 'https://5000-idx-swen-1745306017722.cluster-73qgvk7hjjadkrjeyexca5ivva.cloudworkstations.dev/everything'||'http://localhost:5000/everything'
+    const baseUrl = 'https://swen.onrender.com/everything'
 
     useEffect(() => {
         if (cache[category]) {
