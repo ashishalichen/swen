@@ -3,6 +3,9 @@ const cors = require('cors')
 const app = express()
 const port = 5000
 
+require('dotenv').config();
+const apiKey = process.env.NEWS_API_KEY
+
 
 app.use(cors({
   origin: 'https://5173-idx-swen-1745306017722.cluster-73qgvk7hjjadkrjeyexca5ivva.cloudworkstations.dev',
@@ -17,14 +20,14 @@ app.get('/', (req, res) => {
 
 
 app.get('/headlines', async (req, res) => {
-  const data = await fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=bfdb9b5ca33d4acb88103d5f95c0386c')
+  const data = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`)
   const json = await data.json()
   res.json(json)
 })
 
 
 app.get('/everything', async (req, res) => {
-  const data = await fetch(`https://newsapi.org/v2/everything?apiKey=bfdb9b5ca33d4acb88103d5f95c0386c&q=${req.query.q}`)
+  const data = await fetch(`https://newsapi.org/v2/everything?apiKey=${apiKey}&q=${req.query.q}`)
   const json = await data.json()
   res.json(json)
 })
