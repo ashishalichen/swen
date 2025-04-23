@@ -8,7 +8,8 @@ const apiKey = process.env.NEWS_API_KEY
 
 
 app.use(cors({
-  origin: 'https://5173-idx-swen-1745306017722.cluster-73qgvk7hjjadkrjeyexca5ivva.cloudworkstations.dev',
+  // origin: 'https://5173-idx-swen-1745306017722.cluster-73qgvk7hjjadkrjeyexca5ivva.cloudworkstations.dev',
+  origin: 'https://swen-seven.vercel.app/',
 
   credentials: true
 }));
