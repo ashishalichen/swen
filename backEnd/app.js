@@ -8,8 +8,7 @@ const apiKey = process.env.NEWS_API_KEY
 
 
 app.use(cors({
-  // origin: 'https://5173-idx-swen-1745306017722.cluster-73qgvk7hjjadkrjeyexca5ivva.cloudworkstations.dev',
-  origin: 'https://swen-seven.vercel.app/',
+  origin: 'https://swen-seven.vercel.app',
 
   credentials: true
 }));
@@ -39,9 +38,7 @@ app.get('/search', async (req, res) => {
   res.json(json)
 })
 
-// app.listen(port, () => {
-//   console.log(`Example app listening on port ${port}`)
-// })
+
 
 app.listen(port, '0.0.0.0', () => {
   console.log('Server is running on port 5000');
